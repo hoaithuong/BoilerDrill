@@ -2,13 +2,13 @@
 
 const demoProject = {
     "https://secure.gooddata.com": "k26dtejorcqlqf11crn6imbeevp2q4kg",
-    "https://staging3.intgdc.com": "ht3owbpk6h0yfjtkcsgva3osu3z7paol", //CSV project data: ao22l99sct4ke9k5gq773go9xgtitiq3
+    "https://staging3.intgdc.com": "xp9yfghe4na21w27cyrnyrwx5si2vk6e", //CSV project data: ao22l99sct4ke9k5gq773go9xgtitiq3
     "https://staging2.intgdc.com": "exveshu0intwbr4nk6ao8ft6vesjiqus",
     "https://staging.intgdc.com": "xskxypodp5s4p2t6x99b2szivf8qi3st",
     "https://developer.na.gooddata.com": "xms7ga4tf3g3nzucd8380o2bev8oeknp",
 };
 
-const backendUrl = "https://staging.intgdc.com"; // eslint-disable-line no-undef
+const backendUrl = "https://staging3.intgdc.com"; // eslint-disable-line no-undef
 const demoProjectId = demoProject[backendUrl];
 if (!demoProjectId) {
     console.error(`[fixtures.js] ProjectId for backend "${backendUrl}" is not in `, demoProject); // eslint-disable-line no-console
@@ -72,10 +72,14 @@ export const menuItemNameAttributeDFIdentifier = "label.menuitem.menuitemname";
 export const yearDateDataSetAttributeIdentifier = "date.year";
 export const monthDateDataSetAttributeIdentifier = "date.month";
 export const quarterDateIdentifier = "date.aam81lMifn6q";
+export const quarterDateIdentifierQ1 = `/gdc/md/${projectId}/obj/2009/elements?id=1`;
+export const quarterDateIdentifierQ2 = `/gdc/md/${projectId}/obj/2009/elements?id=2`;
 export const quarteryearDateIdentifier = "date.aci81lMifn6q";
 export const monthDateIdentifier = "date.abm81lMifn6q";
 export const yearDateIdentifier = "date.aag81lMifn6q";
 export const monthDateIdentifierJanuary = `/gdc/md/${projectId}/obj/2071/elements?id=1`;
+export const monthDateIdentifierFeb = `/gdc/md/${projectId}/obj/2071/elements?id=2`;
+export const monthDateIdentifierApril = `/gdc/md/${projectId}/obj/2071/elements?id=4`;
 export const numberOfChecksIdentifier = "aeOt50ngicOD";
 export const tableVisualizationIdentifier = "aatFRvXBdilm";
 export const tableVisualizationUri = `/gdc/md/${projectId}/obj/8702`;
@@ -84,7 +88,7 @@ export const numberOfRestaurantsIdentifier = "aawAq8YqhM3o";
 export const averageRestaurantDailyCostsIdentifier = "aaQJzQzoeKwZ";
 export const grossProfitIdentifier = "aa5JBkFDa7sJ";
 export const totalCostsIdentifier = "aaQHncjzfrtR";
-export const grossProfitUri = "/gdc/md/${projectId}/obj/6877";
+export const grossProfitUri = `/gdc/md/${projectId}/obj/6877`;
 export const pivotTableVisualizationIdentifier = "aahHSnOtdKuH";
 export const pivotTableVisualizationUri = `/gdc/md/${projectId}/obj/9224`;
 export const ProductUri = `/gdc/md/${demoProjectId}/obj/949`;

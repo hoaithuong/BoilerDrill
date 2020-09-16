@@ -21,7 +21,7 @@ export class PivotTableExportExample extends Component {
         const measures = [
             Model.measure(franchiseFeesIdentifier)
                 .format("#,##0")
-                .localIdentifier("franchiseFeesIdentifier"),
+                .localIdentifier("franchiseFees"),
             Model.measure(franchiseFeesAdRoyaltyIdentifier)
                 .format("#,##0")
                 .localIdentifier("franchiseFeesAdRoyaltyIdentifier"),
@@ -39,7 +39,19 @@ export class PivotTableExportExample extends Component {
             Model.attribute(menuCategoryAttributeDFIdentifier),
         ];
 
-        const columns = [Model.attribute(quarterDateIdentifier), Model.attribute(monthDateIdentifier)];
+        const columns = [
+            Model.attribute(quarterDateIdentifier).localIdentifier("quarterDate"), 
+            Model.attribute(monthDateIdentifier)];
+
+        // const measures = [
+        //     Model.measure(franchiseFeesIdentifier)
+        //         .format("#,##0")
+        //         .localIdentifier("franchiseFees"),
+        // ];
+        
+        // const attributes = [Model.attribute(locationStateDisplayFormIdentifier).localIdentifier("state")];
+        
+        // const columns = [Model.attribute(quarterDateIdentifier).localIdentifier("quarterDate")];
 
         const totals = [
             {
@@ -55,7 +67,7 @@ export class PivotTableExportExample extends Component {
             {
                 measureIdentifier: "franchiseFeesAdRoyaltyIdentifier",
                 type: "sum",
-                attributeIdentifier: "state",
+                attributeIdentifier: "state", 
             },
             {
                 measureIdentifier: "franchiseFeesIdentifier",
@@ -81,6 +93,37 @@ export class PivotTableExportExample extends Component {
                             onExportReady={onExportReady}
                             pageSize={20}
                             totals={totals}
+                            // config={{
+                            //     columnSizing: {
+                            //         // defaultWidth: "viewport",
+                            //         columnWidths: [
+                            //             {
+                            //                 attributeColumnWidthItem: {
+                            //                     width: 500,
+                            //                     attributeIdentifier: 'state'
+                            //                 }
+                            //             },
+                            //             {
+                            //                 measureColumnWidthItem: {
+                            //                     width: 10,
+                            //                     locators: [
+                            //                        {
+                            //                             attributeLocatorItem: {
+                            //                                 attributeIdentifier: 'quarterDate',
+                            //                                 element: `/gdc/md/${projectId}/obj/2009/elements?id=1`
+                            //                             }
+                            //                        },
+                            //                        {
+                            //                             measureLocatorItem: {
+                            //                                 measureIdentifier: 'franchiseFees'
+                            //                             }
+                            //                        }
+                            //                     ]
+                            //                 }
+                            //             }
+                            //         ]
+                            //     }
+                            // }}
                         />
                     </div>
                 )}

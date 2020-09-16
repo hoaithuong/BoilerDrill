@@ -5,7 +5,7 @@ import DateFilterComponentExample from "./components/DateFilterComponentExample"
 import DateFilterInPivotTableExample from "./components/DateFilterInPivotTableExample";
 import DateFilterInVisualization from "./components/DateFilterInVisualization";
 import DateFilterInKPI from "./components/DateFilterInKPI";
-import DateFilterInPVTable_CSVFile from "./components/DateFilterInPVTable_CSVFile";
+// import DateFilterInPVTable_CSVFile from "./components/DateFilterInPVTable_CSVFile";
 
 const DateFilterComponents = () => {
     return (
@@ -41,7 +41,7 @@ const DateFilterComponents = () => {
             </div>
             <div>
                 <h3>CSV test PVT with Date filter</h3>
-                <DateFilterInPVTable_CSVFile />
+                {/* <DateFilterInPVTable_CSVFile /> */}
             </div>
         </Page>
     );

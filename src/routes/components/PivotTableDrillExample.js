@@ -71,6 +71,17 @@ const drillableItems = [
     HeaderPredicateFactory.identifierMatch(menuCategoryAttributeDFIdentifier),
     HeaderPredicateFactory.identifierMatch(franchiseFeesIdentifier),
 ];
+const filters = [
+    {
+        negativeAttributeFilter: {
+            displayForm: {
+                identifier: "label.restaurantlocation.locationstate",
+            },
+            notIn: ["California"],
+            textFilter: true,
+        },
+    },
+];
 
 export class PivotTableDrillExample extends Component {
     constructor(props) {
@@ -124,6 +135,7 @@ export class PivotTableDrillExample extends Component {
                         drillableItems={drillableItems}
                         onFiredDrillEvent={this.onDrill}
                         totals={totals}
+                        filters={filters}
                     />
                 </div>
             </div>

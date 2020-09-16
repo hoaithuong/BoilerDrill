@@ -1,6 +1,7 @@
 import React from "react";
 import Page from "../components/Page";
 import PivotTableTotalsExample from "./components/PivotTableTotalsExample";
+import PivotTableExportExample from "./components/PivotTableExportExample";
 
 const PivotTableComponents = () => {
     return (
@@ -8,7 +9,7 @@ const PivotTableComponents = () => {
             <h2>Pivot Table</h2>
             <div>
                 <h3>Example of Pivot Table with Totals</h3>
-                <PivotTableTotalsExample />
+                <PivotTableExportExample />
                 <br />
             </div>
         </Page>

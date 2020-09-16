@@ -9,7 +9,7 @@ import Logout from "./Logout";
 import styles from "./AppRouter.module.scss";
 import { useAuth } from "../contexts/Auth";
 import Welcome from "./Welcome";
-import Page from "../components/Page";
+// import Page from "../components/Page";
 import ExportComponents from "./ExportComponents";
 import AttributeFilterComponents from "./AttributeFilterComponents";
 import DateFilterComponents from "./DateFilterComponents";

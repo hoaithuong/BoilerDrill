@@ -5,7 +5,7 @@ import "@gooddata/react-components/styles/css/dateFilter.css";
 import {
     projectId,
     dateDataSetTestCSV,
-    yearTestCSV,
+    // yearTestCSV,
     monthYearTestCSV,
     educationIdentifier,
     sumAmountIdentifier,

@@ -10,7 +10,7 @@ import {
     franchiseFeesAdRoyaltyIdentifier,
     franchiseFeesInitialFranchiseFeeIdentifier,
     franchiseFeesIdentifierOngoingRoyalty,
-    locationResortIdentifier
+    // locationResortIdentifier
 } from "../utils/fixtures";
 
 export class StackedAreaChartExample extends Component {
